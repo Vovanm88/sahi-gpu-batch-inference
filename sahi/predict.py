@@ -141,6 +141,7 @@ def get_prediction(
 
 def get_sliced_prediction(
     image,
+    num_batch = 1,
     detection_model=None,
     slice_height: Optional[int] = None,
     slice_width: Optional[int] = None,
@@ -223,7 +224,7 @@ def get_sliced_prediction(
     durations_in_seconds = dict()
 
     # currently only 1 batch supported
-    num_batch = 1
+    # num_batch = 1
     # create slices from full image
     time_start = time.time()
     slice_image_result = slice_image(
