@@ -141,7 +141,7 @@ def get_prediction(
 
 def get_sliced_prediction(
     image,
-    num_batch = 1,
+    
     detection_model=None,
     slice_height: Optional[int] = None,
     slice_width: Optional[int] = None,
@@ -159,6 +159,7 @@ def get_sliced_prediction(
     slice_dir: Optional[str] = None,
     exclude_classes_by_name: Optional[List[str]] = None,
     exclude_classes_by_id: Optional[List[int]] = None,
+    num_batch = 1,
 ) -> PredictionResult:
     """
     Function for slice image + get predicion for each slice + combine predictions in full image.
